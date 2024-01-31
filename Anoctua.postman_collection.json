@@ -38,7 +38,88 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "http://localhost:8000/api/pedido/4/"
+				"url": "http://localhost:8000/api/pedido/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "get comidas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/comida/"
+			},
+			"response": []
+		},
+		{
+			"name": "post nueva comida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Desayuno\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/comida/"
+			},
+			"response": []
+		},
+		{
+			"name": "categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/categoria/"
+			},
+			"response": []
+		},
+		{
+			"name": "categoria post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pescado\",\r\n    \"comida\": {\r\n        \"nombre\": \"Almuerzo\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/categoria/"
+			},
+			"response": []
+		},
+		{
+			"name": "producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/producto/"
+			},
+			"response": []
+		},
+		{
+			"name": "productp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Lomo\",\r\n    \"precio\": 1500,\r\n    \"categoria\": 1,\r\n    \"comida\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/producto/"
 			},
 			"response": []
 		}

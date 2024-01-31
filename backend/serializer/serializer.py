@@ -3,7 +3,7 @@ from comida.models import Comida
 from producto.models import Producto
 from categoria.models import Categoria
 from pedido.models import Pedido
-
+from django.http import HttpResponseBadRequest
     
 class ComidaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -28,7 +28,11 @@ class CategoriaSerializer(serializers.ModelSerializer):
         
     def create(self, validated_data):
         comida_data = validated_data.pop('comida')
-        comida_instance, _ = Comida.objects.get_or_create(**comida_data)
+        nombre_comida = comida_data['nombre']
+        try:
+            comida_instance = Comida.objects.get(nombre=nombre_comida)
+        except Comida.DoesNotExist:
+            raise serializers.ValidationError({'comida': f'La comida con nombre "{nombre_comida}" no existe.'})
         categoria_instance = Categoria.objects.create(comida=comida_instance, **validated_data)
         return categoria_instance
 
