@@ -29,7 +29,11 @@ export const TableMenu: FC<TableProps> = ({ data, openLoad, closeLoad }) => {
         <TableHeader />
         <TableBody>
           {data.map((row) => (
-            <TableRowMenu data={row} onClick={() => handleSend(row.id)} />
+            <TableRowMenu
+              data={row}
+              onClick={() => handleSend(row.id)}
+              key={row.id}
+            />
           ))}
         </TableBody>
       </Table>
