@@ -11,6 +11,7 @@ import {
   SelectItemCategoriasProps,
 } from "../../interfaces/interfaces";
 import useStyles from "./style";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export const SelectItemCategoria: FC<SelectItemCategoriasProps> = ({
   values,
@@ -26,7 +27,12 @@ export const SelectItemCategoria: FC<SelectItemCategoriasProps> = ({
   return (
     <Grid className={classes.gridMain}>
       <Typography className={classes.label}>Categorías</Typography>
-      <Select onChange={handleChange} value={value} className={classes.select}>
+      <Select
+        onChange={handleChange}
+        value={value}
+        className={classes.select}
+        IconComponent={KeyboardArrowDownIcon}
+      >
         <MenuItem value={"1"} disabled>
           Seleccioná una Categorias
         </MenuItem>
