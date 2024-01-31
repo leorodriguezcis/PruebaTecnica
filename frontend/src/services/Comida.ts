@@ -11,7 +11,7 @@ class ApiComida {
   }
 
   comida(): Promise<AxiosResponse<any>> {
-    return this.httpClient.get(`/api/comida/`)
+    return this.httpClient.get(`/api/tipo_de_comidas/`)
   }
 }
 
