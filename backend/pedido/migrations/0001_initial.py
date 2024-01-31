@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Pedido',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp', models.DateField(auto_now=True)),
+                ('timestamp', models.DateTimeField(auto_now_add=True)),
                 ('producto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pedidos', to='producto.producto')),
             ],
         ),

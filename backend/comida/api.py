@@ -16,3 +16,10 @@ class ComidaViewSet(viewsets.ModelViewSet):
         serializer = ComidaSerializerWithCategorias(comidas, many=True)
         return Response(serializer.data)
     
+    
+class ComidaViewSetBasic(viewsets.ModelViewSet):
+    queryset = Comida.objects.all()
+    permission_classes = [
+        permissions.AllowAny
+    ]
+    serializer_class = ComidaSerializer

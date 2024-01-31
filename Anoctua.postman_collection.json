@@ -10,7 +10,8 @@
 			"name": "tipo_de_comidas",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8000/api/tipo_de_comidas"
 			},
 			"response": []
 		},
@@ -18,7 +19,8 @@
 			"name": "menu",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8000/api/menu/Almuerzo/Carnes/"
 			},
 			"response": []
 		},
@@ -26,7 +28,8 @@
 			"name": "pedido",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8000/api/pedido/"
 			},
 			"response": []
 		},
@@ -35,7 +38,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "http://localhost:8000/api/pedido/1/"
+				"url": "http://localhost:8000/api/pedido/4/"
 			},
 			"response": []
 		}
