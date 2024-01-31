@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "64dea7b2-dd28-4172-927c-f5eae6fb5034",
+		"name": "Anoctua",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12904006"
+	},
+	"item": [
+		{
+			"name": "tipo_de_comidas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "menu",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "pedido",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Pedido Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8000/api/pedido/1/"
+			},
+			"response": []
+		}
+	]
+}
